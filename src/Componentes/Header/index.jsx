@@ -1,17 +1,16 @@
 import { NavLink } from "react-router-dom";
 import logo from '../../assets/logosinfondopng.png';
-import { Button, Container } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 
 
 function Cabecera() {
   return (
-    <div className="bg-light ">
-      <Container maxW='6xl'>
+    <div className="bg-white sticky top-0 z-[20] mx-auto w-full items-center justify-between p-2 h-[90px]">
+      <Container maxW='6xl' className="">
         <nav className="p-4">
           <div className="container mx-auto flex justify-between items-center">
             <NavLink to="/" className="text-gray-700 text-lg font-semibold">
               <img src={logo} alt="MiLogo" className="h-10" />
-
             </NavLink>
             <div className="flex space-x-4">
               <NavLink

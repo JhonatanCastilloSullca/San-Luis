@@ -11,6 +11,7 @@ import Sostenibilidad from './Pages/Sostenibilidad/index.jsx'
 import Trabaja from './Pages/Trabaja/index.jsx'
 import NotFound from './Pages/notFound/index.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
+import theme from './theme.js'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ChakraProvider>
+  <ChakraProvider theme={theme}>
     <RouterProvider router={router} />
   </ChakraProvider>
 )

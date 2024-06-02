@@ -1,16 +1,22 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation } from 'swiper/modules';
+
+import Certificaciones from '../../Sections/Certificaciones';
+import NuestrosProductos from '../../Sections/NuestrosProductos';
+import Productos from '../../Sections/Productos';
+import SliderSection from '../../Sections/SliderSection';
+import SobreNosotros from '../../Sections/SobreNosotros';
+import Sostenibilidad from '../../Sections/Sostenibilidad';
+import TrabajaNosotro from '../../Sections/TrabajaNosotros';
 
 function Inicio() {
     return (
         <>
-            <div className="h-screen bg-blue-600 flex items-center justify-center">
-                <h1 className="text-white text-4xl font-bold">¡Bienvenido!</h1>
-            </div>
-
+            <SliderSection />
+            <NuestrosProductos />
+            <Productos />
+            <Certificaciones />
+            <SobreNosotros />
+            <Sostenibilidad />
+            <TrabajaNosotro />
         </>
     )
 }
