@@ -1,8 +1,18 @@
 const TitleParrafo = ({ Titulo, Contenido, Align }) => {
     return (
         <>
-            <h2 className={`text-${Align} text-secondaryshade4 text-5xl font-bold py-4`}>{Titulo}</h2>
-            <p className={`leading-9 text-${Align}`}>{Contenido}</p>
+            <div className="pt-2">
+                {
+                    Titulo && (
+                        <h2 className={`text-${Align} text-secondaryshade4 text-5xl font-bold py-4`}>{Titulo}</h2>
+                    )
+                }
+                {
+                    Contenido && (
+                        <p className={`leading-8 text-${Align} text-justify`}>{Contenido}</p>
+                    )
+                }
+            </div>
         </>
     );
 };

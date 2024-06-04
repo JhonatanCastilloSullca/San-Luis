@@ -23,6 +23,7 @@ function SliderSection() {
                     subtitle="Where to grow your business as a photographer: site or social media?"
                     position="left"
                     linkAction="Visitar"
+                    size="100vh"
                 />
             </SwiperSlide>
             <SwiperSlide>
@@ -32,6 +33,7 @@ function SliderSection() {
                     subtitle="Where to grow your business as a photographer: site or social media?"
                     position="center"
                     linkAction="Visitar"
+                    size="100vh"
                 />
             </SwiperSlide>
             <SwiperSlide>
@@ -41,6 +43,7 @@ function SliderSection() {
                     subtitle="Where to grow your business as a photographer: site or social media?"
                     position="right"
                     linkAction="Visitar"
+                    size="100vh"
                 />
             </SwiperSlide>
         </Swiper>

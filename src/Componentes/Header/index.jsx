@@ -23,14 +23,6 @@ function Cabecera() {
                 Inicio
               </NavLink>
               <NavLink
-                to="/historia"
-                className={({ isActive }) =>
-                  isActive ? "text-sanluisgrey font-bold" : "text-sanluisgrey hover:text-sanluisdgrey hover:font-medium"
-                }
-              >
-                Historia
-              </NavLink>
-              <NavLink
                 to="/nosotros"
                 className={({ isActive }) =>
                   isActive ? "text-sanluisgrey font-bold" : "text-sanluisgrey hover:text-sanluisdgrey hover:font-medium"

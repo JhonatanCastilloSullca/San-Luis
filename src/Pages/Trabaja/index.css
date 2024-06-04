@@ -1,0 +1,9 @@
+.cursor-pointer:hover {
+    background-color: #99864d;
+    /* Cambia el color de fondo al hacer hover */
+}
+
+.cursor-pointer:hover h3 {
+    color: #FFFFFF;
+    /* Cambia el color del texto al hacer hover */
+}

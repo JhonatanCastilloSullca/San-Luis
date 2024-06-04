@@ -15,11 +15,10 @@ function Certificaciones() {
                 className="absolute top-0 left-0 w-full h-full opacity-40"
             />
             <Container maxW='6xl' className="p-4 flex relative z-10 justify-between h-full align-middle items-center content-center">
-
                 <div className="w-1/2 grid custom-swiper-container">
-                    <div className="w-[450px]">
+                    <div className="w-[550px]">
                         <TitleParrafo
-                            Titulo="Nuestros Productos"
+                            Titulo="San Luisa la vanguardia"
                             Contenido="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
                             Align="left"
                         />
