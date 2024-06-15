@@ -10,14 +10,27 @@ import 'swiper/css/navigation';
 import { Autoplay, Scrollbar, A11y } from 'swiper/modules';
 import DatosDetalleProducto from '../../Componentes/DatosDetalleProducto';
 
+import DataProducts from "../../Data/Productos.json";
+
 function ProductosSingle() {
     const { slug } = useParams();
+
+    // Buscar el producto por el slug en el JSON de Productos
+    const producto = DataProducts.find(item => item.slug === slug);
+
+    if (!producto) {
+        return (
+            <div>
+                Producto no encontrado.
+            </div>
+        );
+    }
+
     return (
         <>
             <HeroSection
-                image="http://localhost:1337/uploads/slider2_09ab3d7b52.jpg"
-                title={slug}
-                subtitle="Where to grow your business as a photographer: site or social media?"
+                image={producto.imagen} // Aquí deberías tener una imagen correspondiente al producto
+                title={producto.nombre}
                 position="center"
                 size="70vh"
             />
@@ -49,67 +62,25 @@ function ProductosSingle() {
                             }}
                             className="mySwiperDestiny"
                         >
-                            <SwiperSlide>
-                                <div className=" hover:rounded-lg rounded-lg bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=" hover:rounded-lg rounded-lg bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=" hover:rounded-lg rounded-lg bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=" hover:rounded-lg rounded-lg bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=" hover:rounded-lg rounded-lg bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">                                    <img
-                                    src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                    alt="producto"
-                                    className="w-full h-full object-cover rounded-lg"
-                                />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className=" hover:rounded-lg rounded-lg bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg hover:rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
+                            {producto.galeria.map((imagen, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className=" hover:rounded-lg rounded-lg bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
+                                        <img
+                                            src={imagen}
+                                            alt={`Imagen ${index + 1}`}
+                                            className="w-full h-full object-cover rounded-lg"
+                                        />
+                                    </div>
+                                </SwiperSlide>
+                            ))}
                         </Swiper>
                     </div>
                 </div>
                 <div className="w-1/2 grid custom-swiper-container">
                     <div className="w-[480px]">
                         <TitleParrafo
-                            Titulo="Titulo del Producto"
-                            Contenido="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                            Titulo={producto.nombre}
+                            Contenido={producto.descripcion}
                             Align="right"
                         />
                     </div>
@@ -126,20 +97,20 @@ function ProductosSingle() {
                     <div className="productos-category my-4">
                         <div className="flex space-x-4 items-center justify-evenly">
                             <div className="info-product text-center">
-                                <h3 className='text-light text-5xl'>321 Cal</h3>
-                                <h6 className='text-light text-base'>Calorias</h6>
+                                <h3 className='text-light text-5xl'>{producto.calorias} Cal</h3>
+                                <h6 className='text-light text-base'>Calorías</h6>
                             </div>
                             <div className="info-product text-center">
-                                <h3 className='text-light text-5xl'>321 Cal</h3>
-                                <h6 className='text-light text-base'>Calorias</h6>
+                                <h3 className='text-light text-5xl'>{producto.proteinas}</h3>
+                                <h6 className='text-light text-base'>Proteínas</h6>
                             </div>
                             <div className="info-product text-center">
-                                <h3 className='text-light text-5xl'>321 Cal</h3>
-                                <h6 className='text-light text-base'>Calorias</h6>
+                                <h3 className='text-light text-5xl'>{producto.carbohidratos}</h3>
+                                <h6 className='text-light text-base'>Carbohidratos</h6>
                             </div>
                             <div className="info-product text-center">
-                                <h3 className='text-light text-5xl'>321 Cal</h3>
-                                <h6 className='text-light text-base'>Calorias</h6>
+                                <h3 className='text-light text-5xl'>{producto.grasas}</h3>
+                                <h6 className='text-light text-base'>Grasas</h6>
                             </div>
                         </div>
                     </div>
@@ -148,45 +119,17 @@ function ProductosSingle() {
             <div className="bg-white mx-auto w-full items-center justify-between p-2 pb-24">
                 <Container maxW='6xl' className="p-4">
                     <div className='grid grid-cols-3 gap-8'>
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
-                        <DatosDetalleProducto
-                            titulo={'Grasa Saturada'}
-                            contenido={'4g (19 % DV)'}
-                        />
+                        {producto.detalle && producto.detalle.map((detalle, index) => (
+                            <DatosDetalleProducto
+                                key={index}
+                                titulo={detalle.titulo}
+                                contenido={detalle.valor}
+                            />
+                        ))}
                     </div>
                 </Container>
             </div>
-
-
         </>
-
     );
 }
 

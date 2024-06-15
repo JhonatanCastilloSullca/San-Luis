@@ -6,24 +6,36 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectFlip, Pagination, Navigation, Autoplay, Scrollbar, A11y } from 'swiper/modules';
 import TitleParrafo from "../../Componentes/TitleParrafo";
+import DataProducts from "../../Data/Productos.json"
+import { useState } from "react";
+
 
 
 function Productos() {
+
+    const [currentProducto, setCurrentProducto] = useState(DataProducts[0]); // Estado para almacenar el producto actual
+
+    const handleSlideChange = (swiper) => {
+        const currentSlideIndex = swiper.activeIndex;
+        setCurrentProducto(DataProducts[currentSlideIndex]);
+    };
+
     return (
         <div className="relative h-[calc(100vh-90px)] flex items-center justify-center">
             <div
                 className="absolute top-0 left-0 w-full h-full opacity-40"
                 style={{
-                    backgroundImage: `url(http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg)`,
+                    backgroundImage: `url(${currentProducto.imagen})`, // Aquí está la corrección
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     zIndex: -1
                 }}
             />
-            <Container maxW='6xl' className="p-4 flex relative z-10 justify-between h-full align-middle items-center content-center">
-                <div className="w-1/2 grid custom-swiper-container">
+
+            <Container maxW='6xl' className="p-4 flex flex-col md:flex-row relative z-10 justify-between h-full align-middle items-center content-center">
+                <div className="w-full md:w-1/2 grid custom-swiper-container mb-8 md:mb-0">
                     <Swiper
-                        effect={'flip'}
+                        effect="flip"
                         grabCursor={true}
                         modules={[EffectFlip, Pagination, Navigation, Autoplay]}
                         autoplay={{
@@ -31,32 +43,22 @@ function Productos() {
                             disableOnInteraction: false,
                         }}
                         className="custom-swiper"
+                        onSlideChange={(swiper) => handleSlideChange(swiper)}
 
                     >
-                        <SwiperSlide>
-                            <img className="shadow-3xl shadow-white rounded-[25px] object-cover" src="http://localhost:1337/uploads/tostadasintegrales1_255232dd98.jpg" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img className="shadow-3xl shadow-white rounded-[25px] object-cover" src="http://localhost:1337/uploads/tostadasintegrales2_0a2e8ea6c0.jpg" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img className="shadow-3xl shadow-white rounded-[25px] object-cover" src="http://localhost:1337/uploads/tostadasblancas3_59c1990d47.jpg" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img className="shadow-3xl shadow-white rounded-[25px] object-cover" src="http://localhost:1337/uploads/tostadasblancas1_5e7011607a.jpg" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img className="shadow-3xl shadow-white rounded-[25px] object-cover" src="http://localhost:1337/uploads/pasteleria3_130e02ef99.jpg" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img className="shadow-3xl shadow-white rounded-[25px] object-cover" src="http://localhost:1337/uploads/pasteleria2_1afe434113.jpg" />
-                        </SwiperSlide>
+                        {
+                            DataProducts.map(producto => (
+                                <SwiperSlide key={producto.id}>
+                                    <img className="shadow-3xl shadow-white rounded-[25px] object-cover" src={producto.imagen} />
+                                </SwiperSlide>
+                            ))
+                        }
                     </Swiper>
                 </div>
-                <div className="w-[480px] h-full pt-24 align-middle items-center content-center">
+                <div className="w-full md:w-[480px] h-full pt-0 md:pt-24 align-middle items-center content-center">
                     <TitleParrafo
-                        Titulo="Nuestros Productos"
-                        Contenido="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+                        Titulo={currentProducto.nombre}
+                        Contenido={currentProducto.descripcion}
                         Align="right"
                     />
                     <div className="galery-products py-8">
@@ -85,59 +87,23 @@ function Productos() {
                             }}
                             className="mySwiperDestiny"
                         >
-                            <SwiperSlide>
-                                <div className="w-24 h-24 rounded-lg opacity-70 hover:opacity-100 bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="w-24 h-24 rounded-lg opacity-70 hover:opacity-100 bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="w-24 h-24 rounded-lg opacity-70 hover:opacity-100 bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="w-24 h-24 rounded-lg opacity-70 hover:opacity-100 bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="w-24 h-24 rounded-lg opacity-70 hover:opacity-100 bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">                                    <img
-                                    src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                    alt="producto"
-                                    className="w-full h-full object-cover rounded-lg"
-                                />
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="w-24 h-24 rounded-lg opacity-70 hover:opacity-100 bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
-                                    <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
-                                        alt="producto"
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                            </SwiperSlide>
+
+
+                            {
+                                currentProducto.galeria.map(imagen => (
+                                    <SwiperSlide key={imagen.id}>
+                                        <div className="w-24 h-24 rounded-lg opacity-70 hover:opacity-100 bg-gray-300 relative overflow-hidden transition-transform transform hover:scale-105 duration-500">
+                                            <img
+                                                src={imagen.imagen}
+                                                alt="producto"
+                                                className="w-full h-full object-cover rounded-lg"
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                ))
+                            }
+
+
                         </Swiper>
                     </div>
                 </div>

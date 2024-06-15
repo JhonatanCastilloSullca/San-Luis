@@ -7,9 +7,9 @@ function Nosotros() {
     return (
         <>
             <HeroSection
-                image="http://localhost:1337/uploads/slider2_09ab3d7b52.jpg"
-                title="Lessons and insights"
-                subtitle="Where to grow your business as a photographer: site or social media?"
+                image="./src/assets/servicios/tostadasblancas2.jpg"
+                title="Sobre nosotros"
+                subtitle="Conoce nuestra historia y por que San Luis es tu mejor opción"
                 position="center"
                 size="50vh"
             />
@@ -19,26 +19,20 @@ function Nosotros() {
                     <div className="flex justify-between">
                         <div className="w-1/2 align-middle items-center content-center">
                             <div className="sobre-nosotros-image py-8">
-                                <div className="w-full h-[380px] rounded-lg overflow-hidden">
-                                    <iframe
-                                        className="w-full h-full"
-                                        src="https://www.youtube.com/embed/kQJUIRcp35g"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                    ></iframe>
+                                <div className="w-full rounded-lg overflow-hidden px-12">
+                                    <h2 className={`text-left text-secondaryshade4 text-3xl font-bold py-4`}>Misión</h2>
+                                    <p className={`leading-7 text-justify text-base`}>
+                                        Elaborar productos alimenticios (Panadería y Pastelería) con altos estándares de Calidad y buenas prácticas de manufactura (BPM), promoviendo el consumo saludable de productos frescos y de alto valor nutricional para beneficio del mayor número posible de familias, orientándonos siempre en la mejora continua de nuestras operaciones y en el desarrollo de nuestro personal.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div className="w-1/2 align-middle items-center content-center">
                             <div className="sobre-nosotros-image py-8">
                                 <div className="w-full rounded-lg overflow-hidden px-12">
-                                    <h2 className={`text-left text-secondaryshade4 text-3xl font-bold py-4`}>Misión</h2>
+                                    <h2 className={`text-left text-secondaryshade4 text-3xl font-bold py-4`}>Visión</h2>
                                     <p className={`leading-7 text-justify text-base`}>
-                                        Elaborar productos alimenticios de primera calidad con altos estándares de sanidad y buenas prácticas de manufactura (BPM), promoviendo el consumo saludable de productos frescos y de alto valor nutricional para beneficio de mayor número posible de familias.
-                                    </p>
-                                    <h2 className={`text-right text-secondaryshade4 text-3xl font-bold py-4`}>Visión</h2>
-                                    <p className={`leading-7 text-base text-justify`}>
-                                        INDUSTRIAS ALIMENTARIAS SAN LUIS, tiene clara su visión de ser líder en panificación y una de las mejores empresas alimenticias del país, promoviendo el cuidado de la salud y la alimentación de sus clientes.
+                                        INDUSTRIAS ALIMENTARIAS SAN LUIS, tiene clara su visión de ser líder en panificación y una de las mejores empresas alimenticias del país, promoviendo el cuidado de la salud y la alimentación de sus clientes
                                     </p>
                                 </div>
                             </div>
@@ -62,7 +56,7 @@ function Nosotros() {
                     <TitleParrafo
                         Contenido="Sus productos se distribuyen diariamente en las principales cadenas de supermercados y bodegas de la ciudad del Cusco y algunas ciudades de la región Sur Oriente de nuestro país."
                     />
-                    <h2 className={`text-center text-secondaryshade4 text-3xl font-bold py-4`}>Nuestro Equipo</h2>
+                    {/* <h2 className={`text-center text-secondaryshade4 text-3xl font-bold py-4`}>Nuestro Equipo</h2>
                     <div className="productos-category my-16">
                         <div className="flex space-x-4 items-center justify-between">
                             <CircleComponent
@@ -86,7 +80,7 @@ function Nosotros() {
                                 profesion="Fundador/Gerente"
                             />
                         </div>
-                    </div>
+                    </div> */}
 
                 </Container>
             </div>

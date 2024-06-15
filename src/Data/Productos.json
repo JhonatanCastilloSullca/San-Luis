@@ -1,0 +1,212 @@
+[
+    {
+        "id": "1",
+        "nombre": "Pan Blanco",
+        "slug": "pan-blanco",
+        "descripcion": "Pan blanco suave y esponjoso, perfecto para sándwiches y tostadas.",
+        "imagen": "./src/assets/productos/pan-blanco/pan-blanco-principal.png",
+        "galeria": [
+            {
+                "id": "1",
+                "imagen": "./src/assets/productos/pan-blanco/pan-blanco1.png"
+            },
+            {
+                "id": "2",
+                "imagen": "./src/assets/productos/pan-blanco/pan-blanco2.png"
+            },
+            {
+                "id": "3",
+                "imagen": "./src/assets/productos/pan-blanco/pan-blanco3.png"
+            },
+            {
+                "id": "4",
+                "imagen": "./src/assets/productos/pan-blanco/pan-blanco4.png"
+            }
+        ],
+        "calorias": 250,
+        "proteinas": "7.5g",
+        "carbohidratos": "52g",
+        "grasas": "1.3g",
+        "categoria": "Panadería",
+        "detalle": [
+            {
+                "titulo": "Fibra",
+                "valor": "3.5g"
+            },
+            {
+                "titulo": "Vitaminas",
+                "valor": "Complejo B"
+            },
+            {
+                "titulo": "Minerales",
+                "valor": "Calcio"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "nombre": "Pan Integral",
+        "slug": "pan-integral",
+        "descripcion": "Pan integral con mayor contenido de fibra, ideal para una dieta equilibrada.",
+        "imagen": "./src/assets/productos/pan-integral/pan-integral-principal.png",
+        "galeria": [
+            {
+                "id": "1",
+                "imagen": "./src/assets/productos/pan-integral/pan-integral1.png"
+            },
+            {
+                "id": "2",
+                "imagen": "./src/assets/productos/pan-integral/pan-integral2.png"
+            },
+            {
+                "id": "3",
+                "imagen": "./src/assets/productos/pan-integral/pan-integral3.png"
+            },
+            {
+                "id": "4",
+                "imagen": "./src/assets/productos/pan-integral/pan-integral4.png"
+            }
+        ],
+        "calorias": 260,
+        "proteinas": "7.5g",
+        "carbohidratos": "52g",
+        "grasas": "1.3g",
+        "categoria": "Panadería",
+        "detalle": [
+            {
+                "titulo": "Fibra",
+                "valor": "7.5g"
+            },
+            {
+                "titulo": "Vitaminas",
+                "valor": "Complejo B"
+            },
+            {
+                "titulo": "Minerales",
+                "valor": "Calcio"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "nombre": "Pan Chancay",
+        "slug": "pan-chancay",
+        "descripcion": "Pan típico de la región de Chancay, ideal para acompañar comidas.",
+        "imagen": "./src/assets/productos/pan-chancay/pan-chancay-principal.png",
+        "galeria": [
+            {
+                "id": "1",
+                "imagen": "./src/assets/productos/pan-chancay/pan-chancay1.png"
+            },
+            {
+                "id": "2",
+                "imagen": "./src/assets/productos/pan-chancay/pan-chancay2.png"
+            }
+        ],
+        "calorias": 92.3,
+        "proteinas": "2.3g",
+        "carbohidratos": "16.72g",
+        "grasas": "1.7g",
+        "categoria": "Panadería"
+    },
+    {
+        "id": "4",
+        "nombre": "Pan Hamburguesa y Pan Hot Dog",
+        "slug": "pan-hamburguesa-hot-dog",
+        "descripcion": "Pan especial para hamburguesas y hot dogs, con excelente contenido nutricional.",
+        "imagen": "./src/assets/productos/pan-hamburguesa/pan-hamburguesa-principal.png",
+        "galeria": [
+            {
+                "id": "1",
+                "imagen": "./src/assets/productos/pan-hamburguesa/pan-hamburguesa1.png"
+            },
+            {
+                "id": "2",
+                "imagen": "./src/assets/productos/pan-hamburguesa/pan-hamburguesa2.png"
+            }
+        ],
+        "calorias": null,
+        "proteinas": "15.8%",
+        "carbohidratos": "15.3%",
+        "grasas": "8.8%",
+        "categoria": "Panadería",
+        "detalle": [
+            {
+                "titulo": "Fibra",
+                "valor": "13.7%"
+            },
+            {
+                "titulo": "Sodio",
+                "valor": "34.4%"
+            },
+            {
+                "titulo": "Calcio",
+                "valor": "17.5%"
+            },
+            {
+                "titulo": "Hierro",
+                "valor": "28.8%"
+            },
+            {
+                "titulo": "Magnesio",
+                "valor": "0%"
+            },
+            {
+                "titulo": "Fósforo",
+                "valor": "21.4%"
+            },
+            {
+                "titulo": "Potasio",
+                "valor": "5.5%"
+            },
+            {
+                "titulo": "Vitamina B1",
+                "valor": "26.7%"
+            },
+            {
+                "titulo": "Vitamina B2",
+                "valor": "10.8%"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "nombre": "Panetón",
+        "slug": "paneton",
+        "descripcion": "Pan dulce tradicional navideño, con un delicioso sabor y textura.",
+        "imagen": "./src/assets/productos/paneton/paneton-principal.png",
+        "galeria": [
+            {
+                "id": "1",
+                "imagen": "./src/assets/productos/paneton/paneton1.png"
+            },
+            {
+                "id": "2",
+                "imagen": "./src/assets/productos/paneton/paneton2.png"
+            }
+        ],
+        "calorias": 365,
+        "proteinas": "8.0%",
+        "carbohidratos": "61.67%",
+        "grasas": "8.81%",
+        "categoria": "Panadería",
+        "detalle": [
+            {
+                "titulo": "Grasas trans",
+                "valor": "0%"
+            },
+            {
+                "titulo": "Grasas saturadas",
+                "valor": "4.0%"
+            },
+            {
+                "titulo": "Azucares",
+                "valor": "16.40%"
+            },
+            {
+                "titulo": "Sodio",
+                "valor": "0.10%"
+            }
+        ]
+    }
+]

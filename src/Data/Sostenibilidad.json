@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "producto": "Pan artesanal de Cusco",
+        "descripcion": "Nuestro pan artesanal de Cusco se elabora con técnicas tradicionales y ingredientes locales, asegurando un sabor único y fresco.",
+        "sostenibilidad": "Apoyamos a agricultores locales al utilizar harinas y cereales cultivados en la región, contribuyendo a la economía local y reduciendo la huella de carbono.",
+        "imagen": "./src/assets/portfolio/elaboracion6.jpg",
+        "icono": "./src/assets/iconos/sostenibilidad1.png"
+    },
+    {
+        "id": "2",
+        "producto": "Empanadas cusqueñas",
+        "descripcion": "Disfruta de nuestras empanadas cusqueñas, preparadas con ingredientes frescos y típicos de la región para una experiencia culinaria auténtica.",
+        "sostenibilidad": "Priorizamos ingredientes locales y de temporada, minimizando el impacto ambiental y apoyando la agricultura sostenible en Cusco.",
+        "imagen": "./src/assets/servicios/empanadas2.jpg",
+        "icono": "./src/assets/iconos/sostenibilidad2.png"
+    },
+    {
+        "id": "3",
+        "producto": "Panes integrales",
+        "descripcion": "Ofrecemos una variedad de panes integrales, elaborados con harinas naturales y nutritivas para promover una alimentación saludable y sostenible.",
+        "sostenibilidad": "Nos comprometemos a utilizar ingredientes de origen local y a reducir el uso de plásticos en nuestro empaque, cuidando así nuestro entorno natural.",
+        "imagen": "./src/assets/servicios/empanadas1.jpg",
+        "icono": "./src/assets/iconos/sostenibilidad3.png"
+    }
+]

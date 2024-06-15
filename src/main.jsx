@@ -11,6 +11,7 @@ import NotFound from './Pages/notFound/index.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from './theme.js'
 import ProductosSingle from './Pages/ProductosSingle/index.jsx'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 const router = createBrowserRouter([
   {
@@ -28,9 +29,15 @@ const router = createBrowserRouter([
   },
   { path: '*', element: <NotFound /> }
 ]);
+const queryClient = new QueryClient()
+
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ChakraProvider theme={theme}>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient} >
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </ChakraProvider>
 )

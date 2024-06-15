@@ -19,9 +19,9 @@ function Trabaja() {
     return (
         <>
             <HeroSection
-                image="http://localhost:1337/uploads/slider2_09ab3d7b52.jpg"
+                image="./src/assets/portfolio/equipo1.jpg"
                 title={'Trabaja con nosotros'}
-                subtitle="Where to grow your business as a photographer: site or social media?"
+                subtitle="Únete a Nuestro Equipo: Construyamos el Futuro Juntos"
                 position="center"
                 size="50vh"
             />
@@ -31,7 +31,7 @@ function Trabaja() {
                         <div className="sobre-nosotros-image py-8">
                             <div className="w-[520px] h-[380px] rounded-lg">
                                 <img
-                                    src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
+                                    src="./src/assets/portfolio/equipo3.jpg"
                                     alt="producto"
                                     className="w-full h-full object-cover rounded-lg"
                                 />
@@ -52,7 +52,7 @@ function Trabaja() {
                         <div className="flex px-4">
                             <div className="w-24">
                                 <img
-                                    src="http://localhost:1337/uploads/icono_botella_fa8d49c70d.jpg"
+                                    src="./src\assets\iconos\trabaja-con-nosotros.png"
                                     alt="producto"
                                     className="w-18 h-18 object-cover rounded-lg"
                                 />
@@ -68,7 +68,7 @@ function Trabaja() {
                         <div className="flex px-4">
                             <div className="w-24">
                                 <img
-                                    src="http://localhost:1337/uploads/icono_botella_fa8d49c70d.jpg"
+                                    src="./src/assets/iconos/se-distribuidor.png"
                                     alt="producto"
                                     className="w-18 h-18 object-cover rounded-lg"
                                 />
@@ -90,7 +90,7 @@ function Trabaja() {
                                         Trabaja con nosotros
                                     </h3>
                                     <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
+                                        src="./src/assets/portfolio/elaboracion5.jpg"
                                         alt="producto"
                                         className="w-full h-full object-cover rounded-lg"
                                     />
@@ -118,7 +118,7 @@ function Trabaja() {
                                         Se un distribuidor
                                     </h3>
                                     <img
-                                        src="http://localhost:1337/uploads/panintegral1_fd9a0cd578.jpg"
+                                        src="./src/assets/portfolio/delivery5.jpg"
                                         alt="producto"
                                         className="w-full h-full object-cover rounded-lg"
                                     />
